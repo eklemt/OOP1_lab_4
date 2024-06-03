@@ -16,12 +16,13 @@ import org.json.simple.JSONArray;
 class Buch
 {
     // Exemplarvariablen
-    private final String autor;
-    private final String titel;
-    private final String kommentar; 
+    private final String bookClass;
+    private final String citekey;
+    private final String author;
+    private final String title;
+    private final String comment;
     private int anzahlAusleihvorgaenge; 
-    private final int erscheinungsjahr; 
-    private final String verlag;
+    private final int year;
     private int idx;
     
     private static int nummer = 0;
@@ -65,22 +66,24 @@ class Buch
      */
     public Buch(String buchautor, String buchtitel, int jahr)
     {
-        autor = buchautor;
-        titel = buchtitel;
+        author = buchautor;
+        title = buchtitel;
+        bookClass = "unpublished";
+        citekey = "Renz24";
         anzahlAusleihvorgaenge = 0;
-        erscheinungsjahr = jahr; 
-        kommentar = ("Kein Kommentar"); 
-        verlag = ("Keine Angabe"); 
+        year = jahr;
+        comment = ("Kein Kommentar");
         idx = nummer++; 
     }
     
     public Buch(JSONObject jsonObject)  {
         // geht das hier auch ohne String ???, sowas ist Scheie!!!
-        autor = (String) jsonObject.get("author");
-        titel = (String) jsonObject.get("title");
-        verlag = (String) jsonObject.get("publisher");
-        erscheinungsjahr = ((Long)jsonObject.get("year")).intValue(); 
-        kommentar = (String) jsonObject.get("comment"); 
+        bookClass = (String) jsonObject.get("class");
+        citekey = (String) jsonObject.get("citekey");
+        author = (String) jsonObject.get("author");
+        title = (String) jsonObject.get("title");
+        year = ((Long)jsonObject.get("year")).intValue();
+        comment = (String) jsonObject.get("comment");
         idx = nummer++; 
     }
     
@@ -97,7 +100,7 @@ class Buch
      */
     public String gibAutor()
     {
-        return autor;
+        return author;
     }
     
     /**
@@ -105,7 +108,7 @@ class Buch
      */
     public String gibTitel()
     {
-        return titel; 
+        return title;
     }
     
     /** 
@@ -132,7 +135,7 @@ class Buch
      */
     public int gibErscheinungsjahr()
     {
-        return erscheinungsjahr; 
+        return year;
     }
     
     /** 
@@ -140,13 +143,11 @@ class Buch
      */
     public void ausgebenBuchinformationen()
     {
-        System.out.println("Buchtitel: " + titel);
-        System.out.println("Autor: " +  autor);
-        System.out.println("Verlag: " +  verlag);
-        System.out.println("Erscheinungsjahr: " + erscheinungsjahr ); 
+        System.out.println("Buchtitel: " + title);
+        System.out.println("Autor: " +  author);
+        System.out.println("Erscheinungsjahr: " + year );
         System.out.println("Anzahl Ausleihvorgaenge: " + anzahlAusleihvorgaenge);
-        System.out.println("Kommentar:" + kommentar); 
-        System.out.println(""); 
+        System.out.println("Kommentar:" + comment);
     }
 
 }

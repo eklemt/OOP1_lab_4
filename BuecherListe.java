@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 // first standard java libs then further libs
 import org.json.simple.parser.JSONParser;
 import org.json.simple.JSONObject;
