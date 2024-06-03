@@ -1,0 +1,11 @@
+{
+	"class":"book",
+    "citekey":"barnes2017",
+	"author":"David J. Barnes and Michale Kölling",
+    "title": "Java lernen mit BlueJ Objects first - Eine Einführung in Java",
+    "publisher": "Pearson Deutschland",
+	"address":"München",
+    "year": 2017,
+    "isbn": "9783868949117",
+	"comment":"Deutsche Übersetzung von Axel Schmolitzki, HAW Hamburg"
+}
