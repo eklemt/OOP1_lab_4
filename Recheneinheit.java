@@ -1,18 +1,18 @@
 /**
  * Die Haupteinheit eines Rechners, die die Berechnungen
- * durchführt.
+ * durchfï¿½hrt.
  * 
- * @author  David J. Barnes und Michael Kölling 
+ * @author  David J. Barnes und Michael Kï¿½lling 
  * @version 31.07.2011
  */
-public class Recheneinheit
+public class Recheneinheit implements RechnerSchnittstelle
 {
     // Der Zustand der Recheneinheit wird in drei Datenfeldern
     // gehalten:
     // anzeigewertImAufbau, linkerOperandGegeben, letzterOperator
 
     // Setzen wir gerade einen Wert in der Anzeige zusammen oder
-    // wird die nächste Ziffer einen neuen beginnen?
+    // wird die nï¿½chste Ziffer einen neuen beginnen?
     private boolean anzeigewertImAufbau;
     // Wurde bereits ein linker Operand eingegeben (oder berechnet)?
     private boolean linkerOperandGegeben;
@@ -82,8 +82,8 @@ public class Recheneinheit
      */
     public void gleich()
     {
-        // Dies sollte den Aufbau eines zweiten Operanden abschließen,
-        // also prüfen wir, ob ein linker Operand, ein Operator und
+        // Dies sollte den Aufbau eines zweiten Operanden abschlieï¿½en,
+        // also prï¿½fen wir, ob ein linker Operand, ein Operator und
         // ein rechter Operand gegeben sind.
         if(linkerOperandGegeben &&
                 letzterOperator != '?' &&
@@ -98,7 +98,7 @@ public class Recheneinheit
     }
 
     /**
-     * Die C-Taste (für 'Clear') wurde getippt.
+     * Die C-Taste (fï¿½r 'Clear') wurde getippt.
      * Versetze diese Recheneinheit in den Anfangszustand.
      */
     public void clear()
@@ -122,7 +122,7 @@ public class Recheneinheit
      */
     public String gibAutor()
     {
-        return "David J. Barnes und Michael Kölling";
+        return "David J. Barnes und Michael Kï¿½lling";
     }
 
     /**
@@ -193,7 +193,7 @@ public class Recheneinheit
     private void tippfehlerMelden()
     {
         System.out.println("Ein Tippfehler ist aufgetreten.");
-        // Alles zurück setzen.
+        // Alles zurï¿½ck setzen.
         clear();
     }
 }
