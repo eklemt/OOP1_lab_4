@@ -37,6 +37,7 @@ public class Recheneinheit implements RechnerSchnittstelle
      * @return den Wert, der aktuell in der Anzeige gezeigt
      * werden soll.
      */
+    @Override
     public int gibAnzeigewert()
     {
         return anzeigewert;
@@ -48,6 +49,7 @@ public class Recheneinheit implements RechnerSchnittstelle
      * in einen bereits gegebenen Operanden einarbeiten.
      * @param ziffer die getippte Ziffer
      */
+    @Override
     public void zifferGetippt(int ziffer)
     {
         if(anzeigewertImAufbau) {
@@ -64,6 +66,7 @@ public class Recheneinheit implements RechnerSchnittstelle
     /**
      * Die Plus-Taste wurde getippt.
      */
+    @Override
     public void plus()
     {
         operatorAnwenden('+');
@@ -72,6 +75,7 @@ public class Recheneinheit implements RechnerSchnittstelle
     /**
      * Die Minus-Taste wurde getippt.
      */
+    @Override
     public void minus()
     {
         operatorAnwenden('-');
@@ -80,6 +84,7 @@ public class Recheneinheit implements RechnerSchnittstelle
     /**
      * Die Gleich-Taste wurde getippt.
      */
+    @Override
     public void gleich()
     {
         // Dies sollte den Aufbau eines zweiten Operanden abschlie�en,
@@ -101,6 +106,7 @@ public class Recheneinheit implements RechnerSchnittstelle
      * Die C-Taste (f�r 'Clear') wurde getippt.
      * Versetze diese Recheneinheit in den Anfangszustand.
      */
+    @Override
     public void clear()
     {
         letzterOperator = '?';
@@ -112,6 +118,7 @@ public class Recheneinheit implements RechnerSchnittstelle
     /**
      * @return den Titel dieser Recheneinheit.
      */
+    @Override
     public String gibTitel()
     {
         return "Java-Rechner";
@@ -120,6 +127,7 @@ public class Recheneinheit implements RechnerSchnittstelle
     /**
      * @return den Autor dieser Recheneinheit.
      */
+    @Override
     public String gibAutor()
     {
         return "David J. Barnes und Michael K�lling";
@@ -128,6 +136,7 @@ public class Recheneinheit implements RechnerSchnittstelle
     /**
      * @return die Versionsnummer dieser Recheneinheit.
      */
+    @Override
     public String gibVersion()
     {
        return "Version 1.0";

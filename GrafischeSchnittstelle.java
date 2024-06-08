@@ -4,18 +4,18 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 /**
- * Eine grafische Schnittstelle für den Rechner. Hier wird keine
- * Berechnung durchgeführt. Diese Klasse ist ausschließlich für
- * die Anzeige auf dem Bildschirm zuständig. Sie lässt die
- * Recheneinheit alle Berechnungen ausführen.
+ * Eine grafische Schnittstelle fï¿½r den Rechner. Hier wird keine
+ * Berechnung durchgefï¿½hrt. Diese Klasse ist ausschlieï¿½lich fï¿½r
+ * die Anzeige auf dem Bildschirm zustï¿½ndig. Sie lï¿½sst die
+ * Recheneinheit alle Berechnungen ausfï¿½hren.
  * 
- * @author David J. Barnes und Michael Kölling
+ * @author David J. Barnes und Michael Kï¿½lling
  * @version 31.07.2011
  */
 public class GrafischeSchnittstelle
     implements ActionListener
 {
-    private Recheneinheit rechner;
+    private RechnerSchnittstelle rechner;
     private boolean autorAnzeigen;
 
     private JFrame fenster;
@@ -23,11 +23,11 @@ public class GrafischeSchnittstelle
     private JLabel status;
 
     /**
-     * Erzeuge eine grafische Benutzungsschnittstelle für 
+     * Erzeuge eine grafische Benutzungsschnittstelle fï¿½r 
      * eine Recheneinheit.
-     * @param recheneinheit die Recheneinheit
+     * @param recheneinheit, das Recheneinheitsinterface
      */
-    public GrafischeSchnittstelle(Recheneinheit recheneinheit)
+    public GrafischeSchnittstelle(RechnerSchnittstelle recheneinheit)
     {
         rechner = recheneinheit;
         autorAnzeigen = true;
@@ -47,7 +47,7 @@ public class GrafischeSchnittstelle
     }
 
     /**
-     * Baue das Fenster für diese grafische Oberfläche auf.
+     * Baue das Fenster fï¿½r diese grafische Oberflï¿½che auf.
      */
     private void fensterAufbauen()
     {
@@ -90,9 +90,9 @@ public class GrafischeSchnittstelle
     }
 
     /**
-     * Füge dem Tastenfeld eine Taste hinzu.
+     * Fï¿½ge dem Tastenfeld eine Taste hinzu.
      * @param panel der Panel, der die Taste aufnehmen soll
-     * @param tastentext der Text für die Taste
+     * @param tastentext der Text fï¿½r die Taste
      */
     private void tasteHinzufuegen(Container panel, String tastentext)
     {
@@ -102,7 +102,7 @@ public class GrafischeSchnittstelle
     }
 
     /**
-     * Eine Aktion an der Schnittstelle wurde ausgeführt.
+     * Eine Aktion an der Schnittstelle wurde ausgefï¿½hrt.
      * Finde heraus, welche es war und behandle sie.
      * @param event die Beschreibung der Aktion
      */
